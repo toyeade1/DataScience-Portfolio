@@ -1,5 +1,5 @@
 import requests
-from flask import Flask, redirect, request
+from flask import Flask, redirect, request, render_template
 from datetime import datetime
 from os import environ as env
 import sqlite3
@@ -12,19 +12,7 @@ today = datetime.now().strftime('%d/%m/%Y')
 
 @app.route('/')
 def index():
-    return '''
-         <form method="POST">
-             <label>Workout Name: <input type='text' name='workout_name'></label>
-             <br>
-             <label>Set Number: <input type="number" name="sett"></label>
-             <br>
-            <label> Weight (lbs): <input type='number' name='weight'></label>
-             <br>
-             <label>Reps: <input type='number' name='reps'></label>
-             <br>
-             <input type="submit" value="Save Workout">
-         </form>
-     '''
+    return render_template('index.html')
 
 
 @app.route('/', methods=['POST'])
