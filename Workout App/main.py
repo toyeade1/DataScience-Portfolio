@@ -26,7 +26,7 @@ def save_workout():
 
     if workout_name == 'Bp' or 'bp':
         workout_name = 'Bench Press'
-    elif workout_name == 'Dbp' or 'dbp':
+    elif workout_name == 'Dp' or 'dp':
         workout_name = 'Dumbell Bench Press'
     else:
         workout_name = workout_name
