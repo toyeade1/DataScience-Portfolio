@@ -28,6 +28,8 @@ def save_workout():
         workout_name = 'Bench Press'
     elif workout_name == 'Dbp' or 'dbp':
         workout_name = 'Dumbell Bench Press'
+    else:
+        workout_name = workout_name
 
     # Connect to the Sheety API and enter information
     sheet_input = {
