@@ -2,7 +2,7 @@ import requests
 from flask import Flask, redirect, request, render_template
 from datetime import datetime
 from os import environ as env
-import sqlite3
+
 
 app = Flask(__name__)
 
